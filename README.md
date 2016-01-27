@@ -1,2 +1,2 @@
 # trinotateR
-Trinotate annotation report summaries in R
+Load and summarize annotation reports from [Trinotate](https://trinotate.github.io/).

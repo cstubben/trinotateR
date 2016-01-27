@@ -1,0 +1,27 @@
+code	name	clrs
+J	Translation, ribosomal structure and biogenesis	#FCCCFC
+A	RNA processing and modification	#FCDCFC
+K	Transcription	#FCDCEC
+L	Replication, recombination and repair	#FCDCDC
+B	Chromatin structure and dynamics	#FCDCCC
+D	Cell cycle control, cell division, chromosome partitioning	#FCFCDC
+Y	Nuclear structure	#FCFCCC
+V	Defense mechanisms	#FCFCBC
+T	Signal transduction mechanisms	#FCFCAC
+M	Cell wall/membrane/envelope biogenesis	#ECFCAC
+N	Cell motility	#DCFCAC
+Z	Cytoskeleton	#CCFCAC
+W	Extracellular structures	#BCFCAC
+U	Intracellular trafficking, secretion, and vesicular transport	#ACFCAC
+O	Posttranslational modification, protein turnover, chaperones	#9CFCAC
+X	Mobilome: prophages, transposons	#9CFC9C
+C	Energy production and conversion	#BCFCFC
+G	Carbohydrate transport and metabolism	#CCFCFC
+E	Amino acid transport and metabolism	#DCFCFC
+F	Nucleotide transport and metabolism	#DCECFC
+H	Coenzyme transport and metabolism	#DCDCFC
+I	Lipid transport and metabolism	#DCCCFC
+P	Inorganic ion transport and metabolism	#CCCCFC
+Q	Secondary metabolites biosynthesis, transport and catabolism	#BCCCFC
+R	General function prediction only	#E0E0E0
+S	Function unknown	#CCCCCC
