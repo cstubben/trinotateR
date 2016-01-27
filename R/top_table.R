@@ -1,9 +1,4 @@
 
-# source("~/plague/genome/plants/trinotateR/R/top_table.R")
-
-# y <- strsplit(x$gene_ontology_blast, "`")
-# y <- strsplit(y, "\\^" )
-
 top_table <- function(x, column, by,  n=10, position, pattern, replace, split1="`", split2="\\^" ){
 
   if(!missing(by)){

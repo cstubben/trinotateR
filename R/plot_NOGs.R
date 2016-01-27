@@ -1,6 +1,4 @@
 
-# source("~/plague/genome/plants/trinotateR/R/plot_NOGs.R")
-
 plot_NOGs<-function(x, by="gene_id"){
 
    if(by == "transcript_id"){

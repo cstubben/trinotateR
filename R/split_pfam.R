@@ -1,4 +1,3 @@
-# source("~/plague/genome/plants/trinotateR/R/split_pfam.R")
 
 split_pfam <- function(x){
 

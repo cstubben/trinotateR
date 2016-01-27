@@ -1,8 +1,5 @@
-# source("~/plague/genome/plants/trinotateR/R/split_blast.R")
-
 split_blast <- function(x, hit = "TrEMBL_Top_BLASTX_hit"){
    y <- x[!is.na( get(hit) ), .( get(hit), gene_id, transcript_id, prot_id) ]
-
    # split multiple annotations in backtick-delimited list
    z <- strsplit(y$V1, "`" )
    n <- sapply(z, length)

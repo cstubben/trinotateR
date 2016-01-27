@@ -1,0 +1,11 @@
+Package: trinotateR
+Type: Package
+Title: Trinotate annotation report summaries
+Version: 1.0
+Date: 2016-01-27
+Author: Chris Stubben
+Maintainer: Chris Stubben <stubben@lanl.gov>
+Depends: data.table
+License: GPL-3
+Description: tools for loading, parsing and summarizing Trinotate annotation reports
+

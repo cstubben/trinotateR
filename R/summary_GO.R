@@ -1,5 +1,3 @@
-# source("~/plague/genome/plants/trinotateR/R/summary_GO.R")
-
 summary_GO <- function(x){
    uniq <-  c( GO = uniqueN(x$go),  genes=  uniqueN(x$gene), transcripts = uniqueN(x$transcript), proteins = uniqueN(x$protein) )
    y <- x[,.( genes=uniqueN(gene), transcripts=uniqueN(transcript), proteins = uniqueN(protein), total =.N ), by=.(go, ontology, name) ]

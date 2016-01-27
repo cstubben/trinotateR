@@ -1,4 +1,3 @@
-# source("~/plague/genome/plants/trinotateR/R/split_GO.R")
 
 split_GO <- function(x, hit = "gene_ontology_blast"){
    y <- x[!is.na( get(hit) ), .( get(hit), gene_id, transcript_id, prot_id) ]
