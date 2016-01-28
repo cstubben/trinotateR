@@ -1,5 +1,5 @@
 
-`trinotateR` is an `R` package to summarize annotation reports from [Trinotate](https://trinotate.github.io) and map to [UniProt](http://www.uniprot.org) database cross-references.  Use devtools to install the `trinotateR` package.
+`trinotateR` is an `R` package to summarize annotation reports from [Trinotate](https://trinotate.github.io).  Use devtools to install the package.
 
 ```
 library(devtools)
@@ -22,9 +22,7 @@ x <- read_trinotate("Trinotate_report.xls")
 
 ```r
 summary_trinotate(x)
-```
 
-```
                       unique total
 gene_id                56144 75228
 transcript_id          65130 75228
@@ -52,9 +50,7 @@ Most of the annotations contain mutliple hits in a backtick-delimited list and e
 
 ```r
 na.omit(x$Pfam)[1:2]
-```
 
-```
 [1] "PF02586.9^DUF159^Uncharacterised ACR, COG2135^37-105^E:9.1e-20"                                                                                       
 [2] "PF01386.14^Ribosomal_L25p^Ribosomal L25p family^50-139^E:3.8e-07`PF14693.1^Ribosomal_TL5_C^Ribosomal protein TL5, C-terminal domain^154-209^E:3.5e-09"
 ```
@@ -63,9 +59,7 @@ na.omit(x$Pfam)[1:2]
 x1 <- split_pfam(x)
 # 46040 Pfam annotations
 head(x1,3)
-```
 
-```
             gene       transcript protein    pfam          symbol                                     name   align  evalue
 1: GG10000|c0_g1 GG10000|c0_g1_i1 m.81222 PF02586          DUF159             Uncharacterised ACR, COG2135  37-105 9.1e-20
 2: GG10001|c2_g1 GG10001|c2_g1_i1 m.81232 PF01386  Ribosomal_L25p                    Ribosomal L25p family  50-139 3.8e-07
@@ -78,9 +72,7 @@ Finally, the `summary_pfam` lists the 3278 unique Pfam identifiers and the total
 x2 <- summary_pfam(x1)
 # 3278 rows
 head(x2)
-```
 
-```
       pfam      symbol                       name genes transcripts proteins total
 1: PF00069     Pkinase      Protein kinase domain   655         953      999  1030
 2: PF07714 Pkinase_Tyr    Protein tyrosine kinase   619         909      952   989
@@ -96,9 +88,7 @@ The summary table also includes a `count` attribute with the number of unique ge
 
 ```r
 attr(x2, "count")
-```
 
-```
             unique annotations
 Pfam          3278       46040
 genes        19418       29952
@@ -106,7 +96,7 @@ transcripts  23700       37093
 proteins     25504       38144
 ```
 
-Load the [DataTables](https://rstudio.github.io/DT) to  browse and search within the table. The screenshot below shows the Pfam DataTable while searching for "photos" - the full table with all 3278 rows is available [here](http://cstubben.github.io/genomes/Pfam.html).    
+Load the [DataTables](https://rstudio.github.io/DT) library to  browse and search within the table using RStudio. The screenshot below shows the Pfam DataTable while searching for "photos" - the full table with all 3278 rows is available [here](http://cstubben.github.io/genomes/Pfam.html).    
 
 ```
 library(DT)
@@ -118,7 +108,7 @@ library(DT)
 ![](Pfam_photosyn.png)
 
 
-The `trinotateR` packages includes similar functions to split BLAST, GO, and eggnog columns.  Additional functions to plot eggnogs and map the UniRef90 hits in the TrEMBL_Top_BLASTP_hit column to cluster names and KEGG pathways will be described on the wiki pages. 
+The `trinotateR` packages includes similar functions to split BLAST, GO, and eggnog columns.  Additional functions to plot eggnogs and map the UniRef90 hits in the TrEMBL_Top_BLASTP_hit column to cluster names, KEGG pathways and any other [UniProt database cross-reference](http://www.uniprot.org/database) will be described on the wiki pages. 
 
 
 
